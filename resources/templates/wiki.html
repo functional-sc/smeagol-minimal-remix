@@ -9,12 +9,14 @@
 
 {% block content %}
     <div id="content" class="wiki">
+      {% if admin %}      
       {% if editable %}
     	<ul class="minor-controls">
         <li><a href="{{servlet-context}}/edit?page={{title}}">{% i18n edit-page-link %}</a></li>
     		<li><a href="history?page={{page}}">{% i18n history-link %}</a></li>
     	</ul>
-      {% endif %}
+        {% endif %}
+        {% endif %}
       {{content|safe}}
     </div>
 

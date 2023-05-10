@@ -1,4 +1,3 @@
-![One wiki to rule them all](https://www.weft.scot/images/smeagol.png)
 
 # Welcome to Smeagol!
 Smeagol is a hackable, extensible Wiki engine which is reasonably user-friendly. It uses [Markdown](http://daringfireball.net/projects/markdown/) as its text format, and [Git](http://git-scm.com/) to provide versioning and backup.

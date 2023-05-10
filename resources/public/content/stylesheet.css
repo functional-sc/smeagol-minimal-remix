@@ -24,10 +24,22 @@
  ## html elements generally in alphabetic order
  */
 
+@font-face {
+    font-family: gotham_medium;
+    src: url(/content/gotham_medium.ttf);
+}
+
+@font-face {
+    font-family: gotham_light;
+    src: url(/content/gotham_light.ttf);
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: gotham_light;
+  background-color: #F7F6F2; /* palette */
+  line-height: 1.3em;
 }
 
 del {
@@ -35,7 +47,7 @@ del {
 }
 
 div.content, div.error, div.message, form, p, pre, h1, h2, h3, h4, h5 {
-  padding: 0.1em 5% 0 5%;
+  padding: 1.0em 5% 0 5%;
 }
 
 dl, menu, ol, table, ul {
@@ -83,8 +95,12 @@ header {
   margin-top: 0;
   width:100%;
   max-width: 100%;
-  background-color: gray;
-  color: white;
+  #  background-color: gray;
+  background-color: #4B6587; /* palette */
+  # color: white;
+  color: #F0E5CF; /* palette */
+  padding-bottom: 0.1em;
+  padding-top: 1em;
 }
 
 header h1 {
@@ -135,8 +151,14 @@ label {
   display: inline-block;
 }
 
+#content td, th, tr, table {
+    border: 0 !important;
+    border-spacing:0 !important;
+    background-color: none;
+  }
+
 table {
-  border: 2px solid black;
+/*  border: 2px solid black; */
   border-collapse: collapse;
 }
 
@@ -152,7 +174,7 @@ th, td {
 }
 
 th {
-  background-color: silver;
+#  background-color: silver;
 }
 
 /*
@@ -302,9 +324,9 @@ th {
 @media all and (min-device-width: 1025px) {
   /* content of the current page in the Wiki - editable, provided by users. Within main-container */
   #content {
-    border: thin solid silver;
-    width: 80%;
-    float: right;
+#    border: thin solid silver;
+    width: 100%;
+#    float: right;
     padding-bottom: 5em;
   }
 

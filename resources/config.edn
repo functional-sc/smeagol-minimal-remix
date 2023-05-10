@@ -60,9 +60,9 @@
                                         ;; :trace :debug :info :warn :error :fatal
   :passwd               "resources/passwd"
                                         ;; where the password file is stored
-  :site-title           "Smeagol"       ;; overall title of the site, used in
+  :site-title           "Functional SC"       ;; overall title of the site, used in
                                         ;; page headings
-  :start-page           "Introduction"  ;; the page shown to a visitor to the
+  :start-page           "hello"         ;; the page shown to a visitor to the
                                         ;; root URL.
   :thumbnails           {:small 64      ;; maximum dimension of thumbnails
                                         ;; stored in the /small directory

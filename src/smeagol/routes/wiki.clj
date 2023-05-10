@@ -201,7 +201,10 @@
   (or
     (show-sanity-check-error)
     (let [params (keywordize-keys (:params request))
-          page (or (:page params) util/start-page (util/get-message :default-page-title "Introduction" request))
+          page (or (:page params)
+                   (let [s (apply str (rest (:uri request)))] (if (zero? (count s)) nil s))
+                   util/start-page
+                   (util/get-message :default-page-title "Introduction" request) )
           file-name (str page ".md")
           file-path (cjio/file util/content-dir file-name)
           exists? (.exists (clojure.java.io/as-file file-path))]
@@ -445,7 +448,6 @@
 
 
 (defroutes wiki-routes
-  (GET "/" request (wiki-page request))
   (GET "/auth" request (auth-page request))
   (POST "/auth" request (auth-page request))
   (GET "/changes" request (diff-page request))
@@ -466,4 +468,5 @@
   (GET "/upload" request (route/restricted (upload-page request)))
   (POST "/upload" request (route/restricted (upload-page request)))
   (GET "/wiki" request (wiki-page request))
+  (GET "/*" request (wiki-page request))
   )
