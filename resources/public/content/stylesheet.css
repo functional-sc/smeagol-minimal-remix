@@ -309,7 +309,7 @@ th {
 }
 
 .widget {
-	background-color: silver;
+/*	background-color: silver; */
  	border: thin solid white;
  	margin-top: 0;
  	margin-bottom: 0;
@@ -526,6 +526,7 @@ th {
   }
 
   #side-bar {
+    background-color: silver
     display: none;
   }
 }

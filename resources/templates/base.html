@@ -27,17 +27,6 @@
         </menu>
         <div id="phone-side-bar"  class="wiki">
             {{side-bar|safe}}
-          <div id="phone-credits">
-            <p>
-              <img height="16" width="16" alt="one wiki to rule them all"
-                   src="img/smeagol.png"/>One Wiki to rule them all ||
-              Smeagol wiki engine {{version}} ||
-              <img height="16" width="16"
-                   alt="The Web Engineering Factory &amp; Toolworks"
-                  src="http://www.weft.scot/images/weft.logo.64.png">
-              Developed by <a href="http://www.weft.scot/">WEFT</a>
-            </p>
-          </div>
         </div>
       </div>
       <h1>{% i18n site-title %} - {{title}}</h1>
@@ -56,6 +45,9 @@
       {% endif %}
     </header>
 
+    <div id="side-bar"  class="wiki">
+        {{side-bar|safe}}
+    </div>
     <div id="main-container" class="container">
       {% block content %}
       {% endblock %}
@@ -64,5 +56,5 @@
     <!-- div id="twitter" class="container">
       <a class="twitter-timeline" href="https://twitter.com/functional_sc?ref_src=twsrc%5Etfw">Tweets by functional_sc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div -->
-  </body>
+          </body>
 </html>
